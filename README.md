@@ -59,7 +59,13 @@ NB: Before running the script, make sure you update all the variables to point t
 ```
 This step can take several hours depending on your hardware. If you have to stop training for whatever reason, it is possible to continue from where you stoped because of the usage of checkpoints in this code. In order to use checkpoint, you can just run the same command again. Checkpoints are saved every 50 iterations and images of the artificial spectra are displayed every 500 epochs.
 
-5. With now a balanced dataset, we can train the CNN model to classify stars by inspecting their spectra. To train the CNN, just run the following command:
+5. When GAN has trained for several epochs, it means it will have sucessfuly learnt the necessary featues to produce more synthetic O-type spectra. To generate N number of spectra and save it into disk, just run the following command: 
+```console
+~/LAMOST_DR6_CNN_Spectral_Classifier$ python3 simulation/prediction.py
+```
+NB: Before running the script, make sure you update all the variables to point to valid directories and existing files
+
+6. With now a balanced dataset, we can train the CNN model to classify stars by inspecting their spectra. To train the CNN, just run the following command:
 ```console
 ~/LAMOST_DR6_CNN_Spectral_Classifier$ python3 simulation/simulation.py
 ```
@@ -69,7 +75,7 @@ Plots will show the accuracy of the training set and test set every time the CNN
 
 NB: Before running the script, make sure you update all the variables to point to valid directories and existing files
 
-6. The overall results for this research project were very satisfactory. The network achieved an accuracy of 83.95% for all the seven stellar types, whereas it got a remarkable performance of 99% when classifying O-type spectra, meaning the GAN network managed to learn real features from that domain with great fidelity.
+7. The overall results for this research project were very satisfactory. The network achieved an accuracy of 83.95% for all the seven stellar types, whereas it got a remarkable performance of 99% when classifying O-type spectra, meaning the GAN network managed to learn real features from that domain with great fidelity.
 
 Some of the graphics published on the report for the accuracy and loss function can be checked here:
 ![My Remote Image](https://drive.google.com/uc?export=view&id=1vtfZ1U1KzvguGHLG905se_gGC8WW9m7J)
