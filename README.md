@@ -18,12 +18,12 @@ This program was written on a Windows system without any other configuration. Th
     - tensorflow2
     - keras
     - sklearn
-    - matplotlib
+    - matplotlib    
 
 It is important to notice that these packages were installed using [Miniconda](https://docs.conda.io/en/latest/miniconda.html). MiniConda is an open-source, cross-platform, language-agnostic package manager and environment management system. It was originally developed to solve difficult package management challenges faced by Python.
 
 #### **Run the software**
- This program runs in scripts at different stages.  
+ This program runs in scripts at different stages. All the data used for this application is publicly available. It was unreasonable to provide all utilised data in this repository since that would easily consume many Gigabytes of data. Instead, this readme guides you through the process of retrieving the file when you clone this repository to run on your machine.
  
 1. The first thing one wants to do to run the application is to download the CSV file metadata available on the [LAMOST website](http://dr6.lamost.org/v2/catalogue). It is a considerable CSV file containing more than 9 million rows, so it can take some time to download it. 
 
